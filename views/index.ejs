@@ -1,0 +1,97 @@
+<%- include('partials/header.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+        <link rel="stylesheet" type="text/css" href="/public/styles/main.css">
+        <title>My Web</title>
+        
+    </head>
+    <body>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('/public/assets/homepageworld.png')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>wise living</h1>
+                            <span class="subheading"> Living consciously to protect our planet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="https://www.hdfc.com/blog/sustainability-at-hdfc/7-simple-ways-waste-management-home">
+                            <h2 class="post-title">Waste management tips at home</h2>
+                            <h3 class="post-subtitle">Best ways to  reduce  waste and improve sustainability</h3>
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="https://www.hdfc.com/blog">HDFC bank</a>
+                            on September 24, 2023
+                        </p>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                           <%  posts.forEach(function(post){ %>
+                            <a href="posts/:<%=post.title %>">
+                            <h2 class="post-title"><%= post.title %> </h2>
+                            <h3 class="post-subtitle"><%= post.content.substring(0,50) + "..." %></h3>
+                            <p> <a href="posts/:<%=post.title %>">Read More.</a> </p>
+
+                        </a>    
+                           <% } );%>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="#!">
+                            <h2 class="post-title">Science has not yet mastered prophecy</h2>
+                            <h3 class="post-subtitle">We predict too much for the next year and yet far too little for the next ten.</h3>
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">Start Bootstrap</a>
+                            on August 24, 2023
+                        </p>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="#!">
+                            <h2 class="post-title">Failure is not an option</h2>
+                            <h3 class="post-subtitle">Many say exploration is part of our destiny, but it’s actually our duty to future generations.</h3>
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="#!">Start Bootstrap</a>
+                            on July 8, 2023
+                        </p>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Pager-->
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+                </div>
+            </div>
+        </div>
+
+        <%- include('partials/footer.ejs') %>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+
+</html>

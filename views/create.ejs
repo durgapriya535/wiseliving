@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<header>
+    <%- include('partials/header.ejs') %>
+</header>
+<style> 
+body {
+    padding: 100px; 
+    margin-top : 500px/* Add padding to create space around the content */
+  }
+</style>
+<body>
+<h1> compose</h1>
+<form action="/create" method="post">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" id="title" name="title" rows="1", placeholder=""><br>
+    <label for ='textarea' class="form-label">Compose</label>
+    <textarea class="form-control" id="textarea" name="textarea" rows="3", cols="100" placeholder="write your text"></textarea><br>
+<button type="submit" class="btn btn-primary" name="button">Publish</button>
+</form>
+</body>
+
+<footer>
+    <%- include('partials/footer.ejs') %>
+</footer>
+
